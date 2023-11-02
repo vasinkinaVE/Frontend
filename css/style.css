@@ -1,0 +1,245 @@
+@font-face {
+    font-style: normal;
+    font-weight: 400; 
+    src: url('LabGrotesque-Regular.woff2') format('woff2'); 
+    font-family: 'LabGrotesque';
+    font-display: swap;
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 500; 
+    src: url('LabGrotesque-Medium.woff2') format('woff2'); 
+    font-family: 'LabGrotesque';
+    font-display: swap;
+}
+
+.item{
+    width: 552px;
+    max-height: 740px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color:#FFFFFF;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'LabGrotesque';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    background-color: grey;
+}
+
+.wrapper{
+    max-width: 488px;
+    max-height: 740px;
+    margin: 0 auto;
+}
+
+.title{
+    font-family: 'LabGrotesque';
+    font-size: 28px;
+    font-weight: 500; 
+    line-height: 40px;
+    position: absolute ;
+    margin-top: 32px;
+    text-decoration: none;
+    
+}
+.close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 16px;
+    background-color: #FFFFFF;
+    border: #FFFFFF;
+}
+
+.subtitle{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 80px;
+    padding-bottom: 22px;
+    color: #808080;
+}
+.salary_section_title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 25px;
+}
+.salary_section_input{
+    max-width: 488px;
+    height: 36px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #DFE3E6;
+    background-color: #FFFFFF;
+}
+.calculate_button{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 10px;
+    margin-left: -5px;
+    color: #EA0029;
+    background-color: #FFFFFF;
+    border: #FFFFFF;
+}
+.calculation_block_title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 10px;
+}
+.calculation_block {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    user-select: none;
+  }
+  
+  .calculation_block input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #DFE3E6;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+  }
+  
+  .calculation_block:hover input ~ .checkmark {
+    border: 1px solid #DFE3E6;
+    border-radius: 7px;
+    background-color: #DFE3E6;
+  }
+  
+  .calculation_block input:checked ~ .checkmark {
+    border: 1px solid #DFE3E6;
+    border-radius: 7px;
+    background-color:#FF5E56;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .calculation_block input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .calculation_block .checkmark:after {
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border-radius: 3px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .line{
+    max-width: 488px;
+    width: 100%;
+    height: 1px;
+    background-color: #DFE3E6;
+  }
+  .money{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000000;
+  }
+  .year{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #808080;
+  }
+.reduce_block{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 290px;
+    width: 100%;
+    height: 36px;
+    margin-top: 17px;
+}
+.reduce_block_title{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+.reduce_block_payment{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    align-content: center;
+    background-color: #FF5E56;
+    width: 73px;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+}
+.reduce_block_term{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    align-content: center;
+    background-color: #EEF0F2;
+    width: 57px;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+}
+.end_of_calculation{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    align-content: center;
+    background-color: #FF5E56;
+    max-width: 488px;
+    height: 56px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
