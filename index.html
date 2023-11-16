@@ -8,67 +8,39 @@
     <link rel = "stylesheet" href = "./css/style.css">
 </head>
 <body>
-    <div class = "item">
+    <div id="item" class = "item">
         <div class = "wrapper">
             <h2 class="title">Налоговый вычет</h2>
 
-            <button class = "close">&#10060;</button> 
+            <button class = "close" type="button">&#10060;</button> 
     
             <p class="subtitle">Используйте налоговый вычет, чтобы погасить ипотеку досрочно.
                     Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
 
             <label class="salary_section_title">Ваша зарплата в месяц</label>
-            <input class="salary_section_input" type="text">
+            <input id="my_input" class="salary_section_input" type="text">
 
-            <button class="calculate_button">Рассчитать</button>
+            <button id="calcbutton" class="calculate_button" type="button">Рассчитать</button>
 
             <p class="calculation_block_title">Итого можете внести в качестве досрочных:</p>
 
-            <label class="calculation_block">
-                <span class="money">78 000 рублей</span>
-                <span class="year">в 1-ый год</span>
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
+            <div id="checkboxes" class="checkboxes">
 
-              <div class="line"></div>
-              
-              <label class="calculation_block">
-                <span class="money">78 000 рублей</span>
-                <span class="year">во 2-ой год</span>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
 
-              <div class="line"></div>
-              
-              <label class="calculation_block">
-                <span class="money">78 000 рублей</span>
-                <span class="year">в 3-ий год</span>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <div class="line"></div>
-              
-              <label class="calculation_block">
-                <span class="money">26 000 рублей</span>
-                <span class="year">в 4-ый год</span>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-
-              <div class="line"></div>
+            </div>
 
               <div class="reduce_block">
                 <p class="reduce_block_title">Что уменьшаем?</p>
-                <button class="reduce_block_payment">Платёж</button>
-                <button class="reduce_block_term">Срок</button>
+                <div id="buttons">
+                  <button class="reduce_block_payment"  data-type="payment" type="button">Платёж</button>
+                  <button class="reduce_block_term" data-type="period" type="button">Срок</button>
+                </div>
               </div>
 
-              <button class="end_of_calculation">Добавить</button>
+              <button id="submit" class="end_of_calculation" type="submit">Добавить</button>
 
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
