@@ -67,6 +67,10 @@ body{
     border: #FFFFFF;
 }
 
+.close:hover{
+  background-color: #DFE3E6;
+  transition: 0.7s;
+}
 .subtitle{
     font-weight: 400;
     font-size: 14px;
@@ -98,6 +102,10 @@ body{
     color: #EA0029;
     background-color: #FFFFFF;
     border: #FFFFFF;
+}
+.calculate_button:hover{
+  color: rgb(179, 0, 0);
+  transition: 0.7s;
 }
 .calculation_block_title{
     font-weight: 500;
@@ -171,6 +179,10 @@ body{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .checkboxes {
+    display: flex;
+    flex-flow: column;
+  }
   .line{
     max-width: 488px;
     width: 100%;
@@ -217,6 +229,10 @@ body{
     border-radius: 50px;
     border: none;
 }
+.reduce_block_payment:hover{
+  background-color: rgb(179, 0, 0);
+  transition: 0.7s;
+}
 .reduce_block_term{
     font-size: 14px;
     font-weight: 400;
@@ -227,6 +243,10 @@ body{
     height: 36px;
     border-radius: 50px;
     border: none;
+}
+.reduce_block_term:hover{
+  background-color: rgb(158, 158, 158);
+  transition: 0.7s;
 }
 .end_of_calculation{
     color: white;
@@ -242,4 +262,8 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
     border: none;
+}
+.end_of_calculation:hover{
+  background-color: rgb(179, 0, 0);
+  transition: 0.7s;
 }
