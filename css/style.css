@@ -1,27 +1,29 @@
 @font-face {
     font-style: normal;
-    font-weight: 400; 
-    src: url('LabGrotesque-Regular.woff2') format('woff2'); 
+    font-weight: 400;
+    src: url('LabGrotesque-Regular.woff2') format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
 }
 
 @font-face {
     font-style: normal;
-    font-weight: 500; 
-    src: url('LabGrotesque-Medium.woff2') format('woff2'); 
+    font-weight: 500;
+    src: url('LabGrotesque-Medium.woff2') format('woff2');
     font-family: 'LabGrotesque';
     font-display: swap;
 }
 
 .item{
-    width: 552px;
+    /*  */
+    /* width: 552px; */
     max-height: 740px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 30px;
-    border-radius: 30px;
-    background-color:#FFFFFF;
+    /* Не нужно */
+    /* margin-top: 30px; */
+    /* Убрал бэкраунд*/
+    background-color: transparent;
 }
 
 html{
@@ -32,7 +34,8 @@ html{
 }
 
 body{
-    font-family: 'LabGrotesque';
+    /* Нужны запасные шрифты если наш не сработает, (через запятую)*/
+    font-family: 'LabGrotesque', Arial, sans-serif;
     font-style: normal;
     font-size: 16px;
     line-height: 1.2;
@@ -42,40 +45,61 @@ body{
 }
 
 .wrapper{
+    /* Относительная позиция позволяет выстраивать абсолютные болки отностительно этого */
+    position: relative;
     max-width: 488px;
-    max-height: 740px;
-    margin: 0 auto;
+    /* Вообще у блоков не нужно ограничивать высоту, пусть растягивается по контенту */
+    /* max-height: 740px; */
+    /* 10vh - 10% от всей высоты viewport (экрана)  */
+    margin: 10vh auto;
+    /*
+      Если посмотреть по дизайну у на 32 отступ у всего контента от границ
+      (кроме крестика, но он абсолютный)
+    */
+    padding: 32px;
+    /* Добавил бэкграунд */
+    background-color: white;
+
+    /* Сюда бордер радиус */
+    border-radius: 30px;
 }
 
 .title{
-    font-family: 'LabGrotesque';
     font-size: 28px;
-    font-weight: 500; 
+    font-weight: 500;
     line-height: 40px;
-    position: absolute ;
-    margin-top: 32px;
+    /* Не нужно */
+    /* position: absolute ; */
+    /* margin-top: 32px; */
     text-decoration: none;
-    
+    margin-bottom: 16px;
 }
 .close{
     width: 40px;
     height: 40px;
     position: absolute;
-    margin-left: 450px;
+    /*
+      Не нужно если он абсолютный то можно просто поставить right: 0 и от будет у правого угла
+      родительского блока с position: relative
+    */
+    right: 16px;
+    top: 16px;
+    /* margin-left: 450px; */
     margin-top: 16px;
     background-color: #FFFFFF;
     border: #FFFFFF;
 }
 
 .close:hover{
-  background-color: #DFE3E6;
-  transition: 0.7s;
+    background-color: #DFE3E6;
+    transition: 0.7s;
 }
 .subtitle{
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    padding-top: 80px;
+    /* Не нужно */
+    /* padding-top: 80px; */
     padding-bottom: 22px;
     color: #808080;
 }
@@ -86,7 +110,8 @@ body{
     padding-top: 25px;
 }
 .salary_section_input{
-    max-width: 488px;
+    /* Не нужно */
+    /* max-width: 488px; */
     height: 36px;
     width: 100%;
     border-radius: 3px;
@@ -104,8 +129,8 @@ body{
     border: #FFFFFF;
 }
 .calculate_button:hover{
-  color: rgb(179, 0, 0);
-  transition: 0.7s;
+    color: rgb(179, 0, 0);
+    transition: 0.7s;
 }
 .calculation_block_title{
     font-weight: 500;
@@ -124,17 +149,17 @@ body{
     font-weight: 400;
     line-height: 24px;
     user-select: none;
-  }
-  
-  .calculation_block input {
+}
+
+.calculation_block input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  .checkmark {
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -143,31 +168,31 @@ body{
     border: 1px solid #DFE3E6;
     border-radius: 7px;
     background-color: #FFFFFF;
-  }
-  
-  .calculation_block:hover input ~ .checkmark {
+}
+
+.calculation_block:hover input ~ .checkmark {
     border: 1px solid #DFE3E6;
     border-radius: 7px;
     background-color: #DFE3E6;
-  }
-  
-  .calculation_block input:checked ~ .checkmark {
+}
+
+.calculation_block input:checked ~ .checkmark {
     border: 1px solid #DFE3E6;
     border-radius: 7px;
     background-color:#FF5E56;
-  }
-  
-  .checkmark:after {
+}
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  .calculation_block input:checked ~ .checkmark:after {
+}
+
+.calculation_block input:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  .calculation_block .checkmark:after {
+}
+
+.calculation_block .checkmark:after {
     left: 7px;
     top: 4px;
     width: 5px;
@@ -178,39 +203,49 @@ body{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-  .checkboxes {
+}
+.checkboxes {
     display: flex;
     flex-flow: column;
-  }
-  .line{
-    max-width: 488px;
+}
+.line{
+    /* Не нужно */
+    /* max-width: 488px; */
     width: 100%;
     height: 1px;
     background-color: #DFE3E6;
-  }
-  .money{
+}
+.money{
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color: #000000;
-  }
-  .year{
+}
+.year{
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color: #808080;
-  }
+}
 .reduce_block{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    justify-content: space-between;
-    max-width: 290px;
+    /* Там просто отсуп у кнопок */
+    /* justify-content: space-between; */
+    /* Не нужно */
+    /* max-width: 290px; */
     width: 100%;
-    height: 36px;
+    /* Не нужно ограничивать высоту */
+    /* height: 36px; */
     margin-top: 17px;
 }
+
+
+.reduce-block_buttons {
+    margin-left: 16px;
+}
+
 .reduce_block_title{
     font-size: 14px;
     font-weight: 500;
@@ -230,8 +265,8 @@ body{
     border: none;
 }
 .reduce_block_payment:hover{
-  background-color: rgb(179, 0, 0);
-  transition: 0.7s;
+    background-color: rgb(179, 0, 0);
+    transition: 0.7s;
 }
 .reduce_block_term{
     font-size: 14px;
@@ -245,8 +280,8 @@ body{
     border: none;
 }
 .reduce_block_term:hover{
-  background-color: rgb(158, 158, 158);
-  transition: 0.7s;
+    background-color: rgb(158, 158, 158);
+    transition: 0.7s;
 }
 .end_of_calculation{
     color: white;
@@ -255,15 +290,16 @@ body{
     line-height: 24px;
     align-content: center;
     background-color: #FF5E56;
-    max-width: 488px;
+    /* Не нужно */
+    /* max-width: 488px; */
     height: 56px;
     width: 100%;
     border-radius: 6px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border: none;
 }
 .end_of_calculation:hover{
-  background-color: rgb(179, 0, 0);
-  transition: 0.7s;
+    background-color: rgb(179, 0, 0);
+    transition: 0.7s;
 }

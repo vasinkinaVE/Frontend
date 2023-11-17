@@ -8,39 +8,39 @@
     <link rel = "stylesheet" href = "./css/style.css">
 </head>
 <body>
-    <div id="item" class = "item">
-        <div class = "wrapper">
-            <h2 class="title">Налоговый вычет</h2>
+<div id="item" class = "item">
+    <div class = "wrapper">
+        <h2 class="title">Налоговый вычет</h2>
 
-            <button class = "close" type="button">&#10060;</button> 
-    
-            <p class="subtitle">Используйте налоговый вычет, чтобы погасить ипотеку досрочно.
-                    Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
+        <button class = "close" type="button">&#10060;</button>
 
-            <label class="salary_section_title">Ваша зарплата в месяц</label>
-            <input id="my_input" class="salary_section_input" type="text">
+        <p class="subtitle">Используйте налоговый вычет, чтобы погасить ипотеку досрочно.
+            Размер налогового вычета составляет не более 13% от своего официального годового дохода.</p>
 
-            <button id="calcbutton" class="calculate_button" type="button">Рассчитать</button>
+        <label class="salary_section_title">Ваша зарплата в месяц</label>
+        <input id="my_input" class="salary_section_input" type="text">
 
-            <p class="calculation_block_title">Итого можете внести в качестве досрочных:</p>
+        <button id="calcbutton" class="calculate_button" type="button">Рассчитать</button>
 
-            <div id="checkboxes" class="checkboxes">
+        <p class="calculation_block_title">Итого можете внести в качестве досрочных:</p>
 
+        <div id="checkboxes" class="checkboxes">
 
-            </div>
-
-              <div class="reduce_block">
-                <p class="reduce_block_title">Что уменьшаем?</p>
-                <div id="buttons">
-                  <button class="reduce_block_payment"  data-type="payment" type="button">Платёж</button>
-                  <button class="reduce_block_term" data-type="period" type="button">Срок</button>
-                </div>
-              </div>
-
-              <button id="submit" class="end_of_calculation" type="submit">Добавить</button>
 
         </div>
+
+        <div class="reduce_block">
+            <p class="reduce_block_title">Что уменьшаем?</p>
+            <div id="buttons" class="reduce-block_buttons">
+                <button class="reduce_block_payment"  data-type="payment" type="button">Платёж</button>
+                <button class="reduce_block_term" data-type="period" type="button">Срок</button>
+            </div>
+        </div>
+
+        <button id="submit" class="end_of_calculation" type="submit">Добавить</button>
+
     </div>
-    <script src="index.js"></script>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
